@@ -1,0 +1,89 @@
+/*
+This is a CSS comment
+Shortcut for adding a comment is control/cmnd +/
+*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkslategray;
+    /* Adding a background image*/
+    background-image: url(/Users/zaki/Dropbox/Mac/Downloads/white_brick_wall.png);
+}
+p {
+    background-color:salmon
+}
+
+nav ul a {
+    color:darkslategrey;
+    text-decoration:none
+}
+
+.large-text {
+    color:antiquewhite
+}
+.white-text {
+    color:antiquewhite
+}
+/* Selecting Mulitiple Elements*/
+
+/* Combinators*/
+/* direct child selector - will only select the direct child of the parent*/
+article>p{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: lowercase;
+    text-align: center;
+}
+/* Adjacent sibling selector - selects the element that is the very next sibling to the selected elements, if any exist*/
+h3+ul {
+   border: 1px solid black;  
+}
+/* Sibling Selector*/
+h3-p {
+    [text-transform]: uppercase;
+}
+/* Attribute Selector*/
+[href="treatoftheweek"]{  
+    font-weight: bold;
+}
+[src$=".jpg"]{
+    border:8px solid darkslategrey
+}
+/* Using Psuedo classes*/
+/* Styling the navigation*/    
+nav ul a,
+nav ul a:link 
+nav ul a:visited{
+    background-color:antiquewhite
+    /* horzontal, vertical, blur, spread, color*/
+    box-shadow; -2px 2px 4px 2px black;
+
+nav.ul current,
+nav ul a:hover,
+nav ul a:focus {
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    box-shadow: 0 0 4px 2px black
+}
+table th:nth-child(n)
+table th:nth-child(n) {
+    border: 1px solid #000;
+}
+
+/* using formula in nth-child selctor*/
+table td:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0, 2);
+}
+/* Specificity*/
+/* formula: inline style, ID, Class, Tag-name*/
+/*          0       0       0       0*/
+footer{
+    background-color:aqua; 
+}
+/*0012*/
+body footer{
+    background-color:hotpink
+}
